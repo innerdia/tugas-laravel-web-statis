@@ -37,7 +37,7 @@ Route::post('/sapa', 'RegisterController@sapa_post');
 */
 
 
-Route::get('/', 'HomeController@home');
+//Route::get('/', 'HomeController@home');
 
 Route::get('/register', 'AuthController@register');
 
@@ -45,4 +45,26 @@ Route::get('/welcome', 'AuthController@welcome');
 
 Route::post('/welcome', 'AuthController@welcome_post');
 
+//masuk adminlte dahulu baru master. sudah dipindah folder
+Route::get('/master', function() {
+	return view('adminlte.master');
+});
+
+//contoh
+Route::get('/items', function(){
+    return view ('items.index');
+});
+
+Route::get('/items/create', function(){
+    return view ('items.create');
+});
+
+//tugas
+Route::get('/', function(){
+    return view ('items.isiroute1');
+});
+
+Route::get('/data-tables', function(){
+    return view ('items.isiroute2');
+});
 
