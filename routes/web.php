@@ -76,3 +76,12 @@ Route::get('/posts/{id}', 'PostController@show');
 Route::get('/posts/{id}/edit', 'PostController@edit');
 Route::PUT('/posts/{id}', 'PostController@update');
 Route::delete('/posts/{id}', 'PostController@destroy');
+
+//crud tugas
+Route::get('/pertanyaan', 'PertanyaanController@index');
+Route::get('/pertanyaan/create', 'PertanyaanController@create');
+Route::post('/pertanyaan', 'PertanyaanController@store');
+Route::get('/pertanyaan/{pertanyaan_id}', 'PertanyaanController@show');
+Route::get('/pertanyaan/{pertanyaan_id}/edit', 'PertanyaanController@edit');
+Route::put('/pertanyaan/{pertanyaan_id}', 'PertanyaanController@update');
+Route::delete('/pertanyaan/{pertanyaan_id}', 'PertanyaanController@destroy');
