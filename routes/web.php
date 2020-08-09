@@ -68,3 +68,11 @@ Route::get('/data-tables', function(){
     return view ('items.isiroute2');
 });
 
+//crud contoh
+Route::get('/posts/create', 'PostController@create');
+Route::post('/posts', 'PostController@store');
+Route::get('/posts', 'PostController@index');
+Route::get('/posts/{id}', 'PostController@show');
+Route::get('/posts/{id}/edit', 'PostController@edit');
+Route::PUT('/posts/{id}', 'PostController@update');
+Route::delete('/posts/{id}', 'PostController@destroy');
